@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { Tilt } from "react-tilt";
+// import { Tilt } from "react-tilt";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc/index";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt
+    <div
       className="xs:w-[250px] w-full"
-      options={{ max: 45, scale: 1, speed: 450 }} // <-- déplacé ici (correct)
+     // <-- déplacé ici (correct)
     >
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.76)}
@@ -24,7 +24,7 @@ const ServiceCard = ({ index, title, icon }) => {
           </h3>
         </div>
       </motion.div>
-    </Tilt>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Tilt } from "react-tilt";
+// import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { FaExclamationTriangle, FaCheckCircle, FaDotCircle } from "react-icons/fa";
 
@@ -72,8 +72,8 @@ export default function OceanBodyMap() {
                 animate="show"
                 transition={{ delay: index * 0.1 }}
               >
-                <Tilt
-                  options={{ max: 25, scale: 1.05, speed: 400 }}
+                <div
+                  // options={{ max: 25, scale: 1.05, speed: 400 }}
                   className={`p-6 rounded-xl cursor-pointer bg-[#1a2332] 
                   border border-[#008CBA]/30 shadow-md
                   hover:shadow-[#008CBA]/40 transition-all duration-200
@@ -88,7 +88,7 @@ export default function OceanBodyMap() {
                       {organ.title.split("—")[0]}
                     </span>
                   </button>
-                </Tilt>
+                </div>
               </motion.div>
             ))}
           </div>
