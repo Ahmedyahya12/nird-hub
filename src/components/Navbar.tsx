@@ -1,16 +1,19 @@
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets/index";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+
+import Logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary/80 backdrop-blur-sm border-b border-ocean-900/20`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black/80  backdrop-blur-sm border-b border-primary-800`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -25,14 +28,15 @@ const Navbar = () => {
           }}
           aria-label="Ahmed Yahya - Go to home page"
         >
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg shadow-sm bg-gradient-to-br from-teal-300 to-sky-400">
-            🌊
+          <div className="flex items-center justify-center w-10 h-10 rounded-lg shadow-sm ">
+            <img src={Logo} alt="logo" />
           </div>
           <div>
-            <div className="font-semibold">Ocean Body Map</div>
-            <div className="text-xs text-slate-300 -mt-0.5">
-              Et si l'océan était un corps humain
+            <div className="font-semibold">Nird-Hub</div>
+            <div className="text-xs text-slate-300 -mt-0.1">
+              Explorez votre potentiel
             </div>
+
           </div>
         </Link>
 
@@ -42,9 +46,8 @@ const Navbar = () => {
             <li
               key={index}
               role="none"
-              className={`${
-                active === link.title ? "text-secondary" : "text-white-100"
-              } hover:text-secondary text-[18px] font-medium cursor-pointer transition-all duration-300 relative group`}
+              className={`${active === link.title ? "text-secondary" : "text-white-100"
+                } hover:text-secondary text-[18px] font-medium cursor-pointer transition-all duration-300 relative group`}
             >
               <a
                 href={`#${link.id}`}
@@ -58,9 +61,8 @@ const Navbar = () => {
               </a>
               {/* Underline effect */}
               <span
-                className={`absolute -bottom-1 left-0 h-[2px] bg-secondary transition-all duration-300 ${
-                  active === link.title ? "w-full" : "w-0 group-hover:w-full"
-                }`}
+                className={`absolute -bottom-1 left-0 h-[2px] bg-secondary transition-all duration-300 ${active === link.title ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
                 aria-hidden="true"
               />
             </li>
@@ -88,9 +90,8 @@ const Navbar = () => {
 
           <div
             id="mobile-menu"
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-tertiary/95 backdrop-blur-md absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl border border-secondary/20 shadow-glow transition-all duration-300 black-gradient `}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 bg-tertiary/95 backdrop-blur-md absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl border border-secondary/20 shadow-glow transition-all duration-300 black-gradient `}
             role="menu"
             aria-label="Mobile navigation menu"
           >
@@ -99,11 +100,10 @@ const Navbar = () => {
                 <li
                   key={index}
                   role="none"
-                  className={`${
-                    active === link.title
-                      ? "text-secondary font-semibold"
-                      : "text-white-100"
-                  } font-poppins font-medium text-[16px] hover:text-secondary transition-all duration-300 cursor-pointer relative pl-3 w-full`}
+                  className={`${active === link.title
+                    ? "text-secondary font-semibold"
+                    : "text-white-100"
+                    } font-poppins font-medium text-[16px] hover:text-secondary transition-all duration-300 cursor-pointer relative pl-3 w-full`}
                 >
                   {/* Active indicator bar */}
                   {active === link.title && (

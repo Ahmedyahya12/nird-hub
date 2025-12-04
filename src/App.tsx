@@ -1,9 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Hero, Navbar } from "./components";
-import Experience from "./components/Experience";
+import { Hero, Navbar } from "./components";
+
 import VideoBackground from "./components/VideoBackground";
-import OceanBodyMap from "./components/OceanBodyMap";
-import OceanHumanMap from "./components/OceanBodyMap";
+import ParcoursNirds from "./components/ParcoursNirds";
 
 const App = () => {
   return (
@@ -16,14 +15,8 @@ const App = () => {
         </div>
 
         <div className="bg-gradient-to-b from-primary via-[#0a0a1f] to-primary">
-          <About />
-          <Experience />
-          <OceanBodyMap />
-          {/* <Tech />
-          <Works />
-          <Feedbacks />
-          <Contact />
-          <StarsCanvas /> */}
+          {/* <About /> */}
+          <ParcoursNirds />
         </div>
       </div>
     </BrowserRouter>

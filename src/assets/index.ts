@@ -29,7 +29,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import level1 from './level1.png'
+import level2 from './level2.png'
 export {
   logo,
   backend,
@@ -59,4 +60,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  level1,
+  level2
 };

@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  level1
 } from '../assets/index';
 
 export const navLinks = [
@@ -35,10 +36,19 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "parcours-nird",
+    title: "Parcours NIRD",
+  },
+  {
+    id: "services",
+    title: "Services",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
 ];
+
 
 const services = [
   {
@@ -114,7 +124,9 @@ const technologies = [
   },
 ];
 
-const experiences = [
+
+
+const ParcoursNirds = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
@@ -261,5 +273,71 @@ const projects = [
     source_code_link: "https://github.com/",
   },
 ];
+ const NirdLevels = [
+  {
+    title: "Niveau 1 : Comprendre le NIRD",
+    category: "Introduction",
+    icon: level1,
+    iconBg: "white",
+    date: "01",
+    points: [
+      "Découvrir ce que signifie le Numérique Inclusif, Responsable et Durable.",
+      "Comprendre pourquoi le NIRD est important pour les écoles et étudiants.",
+      "Identifier les risques du modèle Big Tech et la dépendance numérique."
+    ],
+  },
 
-export { services, technologies, experiences, testimonials, projects };
+  {
+    title: "Niveau 2 : Inclusion numérique",
+    category: "Accessibilité & Accès",
+    icon: tesla,
+    iconBg: "#5C527F",
+    date: "02",
+    points: [
+      "Garantir que chaque élève ait accès à un appareil fonctionnel.",
+      "Rendre les outils numériques accessibles à tous.",
+      "Réduire les inégalités d'accès."
+    ],
+  },
+
+  {
+    title: "Niveau 3 : Responsabilité numérique",
+    category: "Éthique",
+    icon: shopify,
+    iconBg: "#1F2544",
+    date: "03",
+    points: [
+      "Protéger les données personnelles et la vie privée.",
+      "Comprendre les enjeux des plateformes propriétaires.",
+      "Apprendre des alternatives libres et éthiques."
+    ],
+  },
+
+  {
+    title: "Niveau 4 : Durabilité numérique",
+    category: "Écologie",
+    icon: meta,
+    iconBg: "#3A4750",
+    date: "04",
+    points: [
+      "Donner une seconde vie aux vieux ordinateurs grâce à Linux.",
+      "Adopter des logiciels libres pour prolonger la durée de vie des machines.",
+      "Réduire les déchets électroniques."
+    ],
+  },
+
+  {
+    title: "Niveau 5 : Autonomie numérique",
+    category: "Empowerment",
+    icon: meta,
+    iconBg: "#8C3267",
+    date: "05",
+    points: [
+      "Être capable de choisir des outils numériques sans dépendance.",
+      "Développer une culture numérique libre et souveraine.",
+      "Adopter une démarche critique face aux technologies."
+    ],
+  },
+];
+
+export { services, technologies, ParcoursNirds, testimonials, projects ,NirdLevels};

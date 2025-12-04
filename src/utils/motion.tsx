@@ -1,26 +1,46 @@
-export const textVariant = (delay) => {
+
+// ----------------------------------------------------------------------
+// TEXT VARIANT
+// ----------------------------------------------------------------------
+export const textVariant = (delay: number = 0) => {
   return {
     hidden: {
-      y: -50,
+      y: 30,
       opacity: 0,
     },
     show: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        duration: 1.25,
-        delay: delay,
+        duration: 0.8,
+        delay,
+        easing: "ease-out", // OK : easing accepte un string
       },
     },
-  };
-};
+  }
+}
 
-export const fadeIn = (direction, type, delay, duration) => {
+// ----------------------------------------------------------------------
+// FADE IN
+// ----------------------------------------------------------------------
+export const fadeIn = (
+  direction: "left" | "right" | "up" | "down" | "",
+  type: "spring" | "tween" | "",
+  delay: number = 0,
+  duration: number = 0.75
+) => {
+  let x = 0
+  let y = 0
+
+  if (direction === "left") x = 100
+  if (direction === "right") x = -100
+  if (direction === "up") y = 100
+  if (direction === "down") y = -100
+
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x,
+      y,
       opacity: 0,
     },
     show: {
@@ -28,61 +48,28 @@ export const fadeIn = (direction, type, delay, duration) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
+        delay,
+        duration,
+        easing: "ease-out",
       },
     },
-  };
-};
+  }
+}
 
-export const zoomIn = (delay, duration) => {
-  return {
-    hidden: {
-      scale: 0,
-      opacity: 0,
-    },
-    show: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "tween",
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
-    },
-  };
-};
-
-export const slideIn = (direction, type, delay, duration) => {
-  return {
-    hidden: {
-      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
-    },
-    show: {
-      x: 0,
-      y: 0,
-      transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
-        ease: "easeOut",
-      },
-    },
-  };
-};
-
-export const staggerContainer = (staggerChildren: unknown, delayChildren: unknown) => {
+// ----------------------------------------------------------------------
+// STAGGER CONTAINER
+// ----------------------------------------------------------------------
+export const staggerContainer = (
+  staggerChildren: number = 0.15,
+  delayChildren: number = 0
+) => {
   return {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: staggerChildren,
-        delayChildren: delayChildren || 0,
+        staggerChildren,
+        delayChildren,
       },
     },
-  };
-};
+  }
+}

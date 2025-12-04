@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Cercle Ocean avec effet glow */}
           <div className="w-5 h-5 rounded-full bg-secondary shadow-glow" />
           {/* Gradient Ocean */}
-          <div className="w-1 h-40 sm:h-80 ocean-gradient" />
+          <div className="w-1 h-40 sm:h-80 violet-gradient " />
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>

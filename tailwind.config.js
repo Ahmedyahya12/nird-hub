@@ -1,45 +1,51 @@
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
   theme: {
     extend: {
       colors: {
-        primary: "#0a1929",        // Bleu nuit profond
-        secondary: "#008CBA",      
-        tertiary: "#1a2332",       // Bleu nuit moyen
-        accent: "#00ffcc",   
+        // Couleur principale violet-rose
         primary: {
-					100: "#D5F3FF",
-					200: "#A6E4FF",
-					300: "#76D5FF",
-					400: "#3CB8F2",
-					500: "#008CBA",
-					600: "#00729A",
-					700: "#005A7A",
-					800: "#00425A",
-					900: "#002B3B",
-				},     
-        "black-100": "#0d1821",    // Noir bleuté
-        "black-200": "#050a0f",    // Noir très profond
-        "white-100": "#f8fafb",    // Blanc cassé
-        "ocean-50": "#e6faf7",     // Ocean très clair
-        "ocean-100": "#b3f0e8",    // Ocean clair
-        "ocean-200": "#80e7d9",    // Ocean moyen-clair
-        "ocean-300": "#4dddc9",    // Ocean moyen
-        "ocean-400": "#1ad4ba",    // Ocean moyen-foncé
-        "ocean-500": "#00D1B2",    // Ocean (base)
-        "ocean-600": "#00a78f",    // Ocean foncé
-        "ocean-700": "#007d6b",    // Ocean très foncé
-        "ocean-800": "#005448",    // Ocean ultra-foncé
-        "ocean-900": "#002a24",    // Ocean presque noir
+          50: "#fdf4f9",
+          100: "#fbe8f3",
+          200: "#f7d1e7",
+          300: "#f0aad4",
+          400: "#e678b8",
+          500: "#d8499c",
+          600: "#c22d7e",
+          700: "#a62066",
+          800: "#8C3267", // Couleur principale
+          900: "#6e2852",
+        },
+       
+        secondary: "#d946a8",      // Rose vif complémentaire
+        
+        tertiary: "#151030",     // Violet foncé
+        accent: "#ff6bcd",         // Rose accent
+        
+
+        black:"#050816",
+        "white-100": "#fdf9fc",    // Blanc cassé rosé
+        
+        // Palette violet-rose étendue
+        "plum-50": "#fdf5fa",
+        "plum-100": "#fae6f2",
+        "plum-200": "#f5cde5",
+        "plum-300": "#eba5cf",
+        "plum-400": "#de6fb0",
+        "plum-500": "#c23d8d",
+        "plum-600": "#a0276f",
+        "plum-700": "#8C3267",     // Base
+        "plum-800": "#6b264e",
+        "plum-900": "#4d1b38",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #00554830",
-        "card-hover": "0px 40px 140px -10px #00D1B250",
-        glow: "0 0 20px rgba(0, 209, 178, 0.3)",
-        "glow-lg": "0 0 40px rgba(0, 209, 178, 0.5)",
+        card: "0px 35px 120px -15px #8C326730",
+        "card-hover": "0px 40px 140px -10px #8C326750",
+        glow: "0 0 20px rgba(140, 50, 103, 0.3)",
+        "glow-lg": "0 0 40px rgba(140, 50, 103, 0.5)",
+        "glow-pink": "0 0 30px rgba(217, 70, 156, 0.4)",
       },
       screens: {
         xs: "450px",
@@ -47,21 +53,39 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/hero.jpg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-ocean": "linear-gradient(135deg, #00D1B2 0%, #00a78f 100%)",
-        "gradient-ocean-reverse": "linear-gradient(135deg, #00a78f 0%, #00D1B2 100%)",
-         "gradient-ocean-overlay": "linear-gradient(to bottom, rgba(10,25,41,0.8), rgba(10,25,41,0.6), rgba(13,24,33,0.9))",
+        "gradient-plum": "linear-gradient(135deg, #8C3267 0%, #a0276f 100%)",
+        "gradient-plum-reverse": "linear-gradient(135deg, #c23d8d 0%, #8C3267 100%)",
+        "gradient-plum-light": "linear-gradient(135deg, #de6fb0 0%, #8C3267 100%)",
+        "gradient-plum-overlay": "linear-gradient(to bottom, rgba(26,13,22,0.8), rgba(26,13,22,0.6), rgba(74,31,58,0.9))",
+        "gradient-shimmer": "linear-gradient(90deg, transparent, rgba(140, 50, 103, 0.3), transparent)",
       },
       animation: {
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "float": "float 6s ease-in-out infinite",
+        "shimmer": "shimmer 2s infinite",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { 
+            boxShadow: "0 0 20px rgba(140, 50, 103, 0.3)",
+            opacity: "1"
+          },
+          "50%": { 
+            boxShadow: "0 0 40px rgba(140, 50, 103, 0.6)",
+            opacity: "0.8"
+          },
+        },
       },
     },
   },
   plugins: [],
-};
+}
