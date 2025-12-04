@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Leviathan
+* source:	https://sketchfab.com/3d-models/the-leviathan-d6d8da347b5849acb2ba2f4779db5a26
+* author:	charliegodofsharks (https://sketchfab.com/charliegodofsharks)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Leviathan" (https://sketchfab.com/3d-models/the-leviathan-d6d8da347b5849acb2ba2f4779db5a26) by charliegodofsharks (https://sketchfab.com/charliegodofsharks) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

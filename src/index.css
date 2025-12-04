@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-top: 100px;
+  display: block;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Gradient mis à jour avec Ocean */
+.black-gradient {
+  background: #0a1929;
+  background: -webkit-linear-gradient(to right, #1a2332, #0a1929);
+  background: linear-gradient(to right, #1a2332, #0a1929);
+}
+
+/* Nouveau gradient Ocean */
+.ocean-gradient {
+  background: #008CBA;
+  background: linear-gradient(-90deg, #008CBA 0%, rgba(0, 209, 178, 0) 100%);
+  background: -webkit-linear-gradient(-90deg, #008CBA 0%, rgba(0, 209, 178, 0) 100%);
+}
+
+/* Gradient violet remplacé par Ocean-Cyan */
+.violet-gradient {
+  background: #008CBA;
+  background: linear-gradient(-90deg, #008CBA 0%, #00ffcc 100%);
+  background: -webkit-linear-gradient(-90deg, #008CBA 0%, #00ffcc 100%);
+}
+
+/* Gradient vert-rose remplacé par Ocean dégradé */
+.green-pink-gradient {
+  background: #008CBA;
+  background: linear-gradient(90.13deg, #036383 1.9%, #008CBA 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00a78f 1.9%, #00ffcc 97.5%);
+}
+
+/* Gradient Ocean pour texte (principal) */
+.ocean-text-gradient {
+  background: #008CBA;
+  background: -webkit-linear-gradient(to top, #007d6b, #00ffcc);
+  background: linear-gradient(to top, #007d6b, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Ocean inversé */
+.ocean-reverse-text-gradient {
+  background: #00ffcc;
+  background: -webkit-linear-gradient(to top, #00ffcc, #00a78f);
+  background: linear-gradient(to top, #00ffcc, #00a78f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient orange conservé mais harmonisé */
+.orange-text-gradient {
+  background: #f12711;
+  background: -webkit-linear-gradient(to top, #f12711, #f5af19);
+  background: linear-gradient(to top, #f12711, #f5af19);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient vert remplacé par Ocean */
+.green-text-gradient {
+  background: #00a78f;
+  background: -webkit-linear-gradient(to top, #00a78f, #008CBA);
+  background: linear-gradient(to top, #00a78f, #008CBA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient bleu remplacé par Ocean clair */
+.blue-text-gradient {
+  background: #008CBA;
+  background: -webkit-linear-gradient(to top, #00a78f, #00ffcc);
+  background: linear-gradient(to top, #00a78f, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient rose conservé pour contraste */
+.pink-text-gradient {
+  background: #ec008c;
+  background: -webkit-linear-gradient(to top, #ec008c, #fc6767);
+  background: linear-gradient(to top, #ec008c, #fc6767);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Nouveaux gradients supplémentaires Ocean */
+.ocean-glow-gradient {
+  background: radial-gradient(circle at center, #008CBA 0%, #00a78f 50%, transparent 100%);
+}
+
+.ocean-shimmer-gradient {
+  background: linear-gradient(
+    120deg,
+    #00a78f 0%,
+    #008CBA 40%,
+    #00ffcc 60%,
+    #008CBA 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Canvas loader mis à jour avec Ocean */
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%, 100% {
+    box-shadow: 0em -2.6em 0em 0em #008CBA,
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.2),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.2),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.2),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.5),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.7),
+      1.8em -1.8em 0 0em #008CBA, 
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.2),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.2),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.2),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.5),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.7), 
+      2.5em 0em 0 0em #008CBA,
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.2),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.2),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.2),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.5),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.7), 
+      1.75em 1.75em 0 0em #008CBA,
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.2),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.2),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.5),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.7), 
+      0em 2.5em 0 0em #008CBA,
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.2),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.2),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.2),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.5),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.7), 
+      -1.8em 1.8em 0 0em #008CBA,
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.2),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.2),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.2),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.5),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.7), 
+      -2.6em 0em 0 0em #008CBA,
+      -1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(0, 209, 178, 0.2),
+      1.8em -1.8em 0 0em rgba(0, 209, 178, 0.2),
+      2.5em 0em 0 0em rgba(0, 209, 178, 0.2),
+      1.75em 1.75em 0 0em rgba(0, 209, 178, 0.2),
+      0em 2.5em 0 0em rgba(0, 209, 178, 0.2),
+      -1.8em 1.8em 0 0em rgba(0, 209, 178, 0.5),
+      -2.6em 0em 0 0em rgba(0, 209, 178, 0.7), 
+      -1.8em -1.8em 0 0em #008CBA;
+  }
+}
+
+/* Effet de pulsation Ocean */
+@keyframes ocean-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 209, 178, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 209, 178, 0);
+  }
+}
+
+.ocean-pulse {
+  animation: ocean-pulse 2s infinite;
+}
+
+/* Effet de brillance Ocean */
+@keyframes ocean-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(0, 209, 178, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 209, 178, 0.8));
+  }
+}
+
+.ocean-glow {
+  animation: ocean-glow 3s ease-in-out infinite;
+}
